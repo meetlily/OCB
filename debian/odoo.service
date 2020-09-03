@@ -1,0 +1,14 @@
+[Unit]
+Description=Meetlily ERP and CRM (odoo)
+After=network.target
+
+[Service]
+Type=simple
+User=evillanueva
+Group=evillanueva
+ExecStart=/opt/OCB/odoo-bin --config /etc/odoo.conf --logfile /var/log/odoo/odoo-server.log
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
+
